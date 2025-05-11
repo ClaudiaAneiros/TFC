@@ -54,7 +54,7 @@ img {
 }
 
 .flex-inicio, .flex-libros, .flex-ofertas, .flex-nosotros, .flex-contacto {
-    margin: 1rem;
+    margin: 1rem 2rem;
 }
 
 .horizontal li {
