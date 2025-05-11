@@ -1,45 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 18px;
     font-style: normal;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-img{
+
+img {
     width: 200px;
     height: auto;
     margin-left: 100px;
 }
 
-.iconos, .busqueda{
+.iconos, .busqueda {
     display: flex;
     justify-content: flex-end;
     margin: 20px 100px;
 }
 
-.iconos i:hover, .busqueda i:hover{    
+.iconos i:hover, .busqueda i:hover {
     filter: contrast(0.3);
     cursor: pointer;
 }
-.icono{
+
+.icono {
     margin: 30px 10px;
     font-size: 18px;
 }
-.barra_busqueda, .lupa{
+
+.barra_busqueda, .lupa {
     margin: 0 10px;
 }
 
-.flex-menu{
+.flex-menu {
     background-color: #C9FBFE;
     display: flex;
     justify-content: center;
@@ -48,28 +52,32 @@ img{
     position: sticky;
     top: 0;
 }
-.flex-inicio, .flex-libros, .flex-ofertas, .flex-nosotros, .flex-contacto{
+
+.flex-inicio, .flex-libros, .flex-ofertas, .flex-nosotros, .flex-contacto {
     margin: 1rem;
 }
 
-.horizontal li{
+.horizontal li {
     display: inline-block;
 }
-.horizontal a{
+
+.horizontal a {
     text-decoration: none;
     color: #7B5F35;
 }
-.horizontal a.activo{
+
+.horizontal a.activo {
     background-color: #53E7F7;
     border-radius: 20px;
     padding: 1rem 1.5rem;
 }
-.flex-menu .horizontal a:hover:not(.activo){
+
+.flex-menu .horizontal a:hover:not(.activo) {
     padding: 1rem 0;
     border-bottom: 1px solid black;
 }
 
-.flex-pie{
+.flex-pie {
     background-color: #C9FBFE;
     display: flex;
     flex-wrap: wrap;
@@ -78,21 +86,27 @@ img{
     position: relative;
     bottom: 5px;
 }
-.flex-pie p{
+
+.flex-pie p {
     padding: 1.2rem 4rem;
 }
-.flex-pie a:nth-of-type(1), a:nth-of-type(2){
+
+.flex-pie a:nth-of-type(1), .flex-pie a:nth-of-type(2) {
     padding: 1.2rem 5rem;
 }
-.flex-pie a{
+
+.flex-pie a {
+    text-decoration: none;
     color: black;
     padding: 1.2rem 0.6rem;
 }
-.flex-pie a:hover{
+
+.flex-pie a:hover {
     border-bottom: 1px solid black;
     cursor: pointer;
 }
-.flex-pie p:hover{
+
+.flex-pie p:hover {
     border-bottom: 1px solid black;
     padding: 1.2rem 4rem;
 }
@@ -128,30 +142,35 @@ img{
 .info p {
     margin: 10px 0;
 }
-  
+
 
 /* Formulario */
-form{
+form {
     width: 20rem;
 }
-label{
+
+label {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
-textarea{
+
+textarea {
     width: 100%;
     height: 10rem;
     margin-bottom: 10px;
 }
-input{
+
+input {
     margin-bottom: 10px;
     width: 100%;
 }
-input[required]{
+
+input[required] {
     font-weight: bold;
 }
-input[type="submit"]{
+
+input[type="submit"] {
     background-color: #C9FBFE;
     border: none;
     border-radius: 10px;
@@ -163,7 +182,7 @@ input[type="submit"]{
     left: 100px;
     color: #7B5F35;
 }
+
 input[type="submit"]:hover {
     background-color: #53E7F7;
 }
-
