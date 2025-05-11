@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 18px;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  margin-left: 100px;
+}
+
+.iconos, .busqueda {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 100px;
+}
+
+.iconos i:hover, .busqueda i:hover {
+  filter: contrast(0.3);
+  cursor: pointer;
+}
+
+.icono {
+  margin: 30px 10px;
+  font-size: 18px;
+}
+
+.barra_busqueda, .lupa {
+  margin: 0 10px;
+}
+
+.flex-menu {
+  background-color: #C9FBFE;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.flex-inicio, .flex-libros, .flex-ofertas, .flex-nosotros, .flex-contacto {
+  margin: 1rem;
+}
+
+.horizontal li {
+  display: inline-block;
+}
+
+.horizontal a {
+  text-decoration: none;
+  color: #7B5F35;
+}
+
+.horizontal a.activo {
+  background-color: #53E7F7;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+}
+
+.flex-menu .horizontal a:hover:not(.activo) {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+.flex-pie {
+  background-color: #C9FBFE;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+}
+
+.flex-pie p {
+  padding: 1.2rem 4rem;
+}
+
+.flex-pie a:nth-of-type(1), a:nth-of-type(2) {
+  padding: 1.2rem 5rem;
+}
+
+.flex-pie a {
+  color: black;
+  padding: 1.2rem 0.6rem;
+}
+
+.flex-pie a:hover {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.flex-pie p:hover {
+  border-bottom: 1px solid black;
+  padding: 1.2rem 4rem;
+}
+
+/* Libros */
+.filtro-tematica {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filtro-tematica select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.categoria {
+  margin: 40px;
+}
+
+.categoria h2 a {
+  text-decoration: none;
+  color: #982FDC;
+}
+
+.libros-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.libro {
+  text-align: center;
+}
+
+.libro img {
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 0;
+}
+
+.libro img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.precio {
+  font-weight: bold;
+  color: #009688;
+}
