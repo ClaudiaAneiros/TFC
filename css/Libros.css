@@ -91,11 +91,12 @@ img {
   padding: 1.2rem 4rem;
 }
 
-.flex-pie a:nth-of-type(1), a:nth-of-type(2) {
+.flex-pie a:nth-of-type(1), .flex-pie a:nth-of-type(2) {
   padding: 1.2rem 5rem;
 }
 
 .flex-pie a {
+  text-decoration: none;
   color: black;
   padding: 1.2rem 0.6rem;
 }
@@ -131,22 +132,32 @@ img {
   color: #982FDC;
 }
 
+.categoria h2 a:hover {
+  text-decoration: underline;
+}
+
 .libros-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
   margin-top: 20px;
+  justify-items: center;
 }
 
 .libro {
   text-align: center;
+  width: 10rem;
+}
+
+p.titulo {
+  font-weight: bold;
 }
 
 .libro img {
-  width: 40%;
-  height: auto;
+  width: 100%;
+  height: 16rem;
   border-radius: 5px;
   margin-left: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .libro img:hover {
