@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 18px;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.iconos, .busqueda {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 100px;
+}
+
+.iconos i:hover, .busqueda i:hover {
+    filter: contrast(0.3);
+    cursor: pointer;
+}
+
+.icono {
+    margin: 30px 10px;
+    font-size: 18px;
+}
+
+.barra_busqueda, .lupa {
+    margin: 0 10px;
+}
+
+.flex-menu {
+    background-color: #C9FBFE;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.flex-inicio, .flex-libros, .flex-ofertas, .flex-nosotros, .flex-contacto {
+    margin: 1rem;
+}
+
+.horizontal li {
+    display: inline-block;
+}
+
+.horizontal a {
+    text-decoration: none;
+    color: #7B5F35;
+}
+
+.horizontal a.activo {
+    background-color: #53E7F7;
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+}
+
+.flex-menu .horizontal a:hover:not(.activo) {
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+}
+
+.flex-pie {
+    background-color: #C9FBFE;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+}
+
+.flex-pie p {
+    padding: 1.2rem 4rem;
+}
+
+.flex-pie a:nth-of-type(1), .flex-pie a:nth-of-type(2) {
+    padding: 1.2rem 5rem;
+}
+
+.flex-pie a {
+    text-decoration: none;
+    color: black;
+    padding: 1.2rem 0.6rem;
+}
+
+.flex-pie a:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.flex-pie p:hover {
+    border-bottom: 1px solid black;
+    padding: 1.2rem 4rem;
+}
+
+/* Ofertas */
+.oferta {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.oferta h2 {
+    margin-bottom: 30px;
+}
+
+.libros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+    justify-items: center;
+    width: 100%;
+}
+
+.libro {
+    width: 10rem;
+    text-align: center;
+}
+
+p.titulo {
+    font-weight: bold;
+}
+
+.libro img {
+    width: 100%;
+    height: 16rem;
+    border-radius: 10px;
+    margin-left: 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.libro img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.libro p {
+    margin-top: 8px;
+    font-size: 14px;
+}
