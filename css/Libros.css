@@ -106,11 +106,6 @@ img {
   cursor: pointer;
 }
 
-.flex-pie p:hover {
-  border-bottom: 1px solid black;
-  padding: 1.2rem 4rem;
-}
-
 /* Libros */
 .filtro-tematica {
   text-align: center;

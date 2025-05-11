@@ -106,11 +106,6 @@ img {
     cursor: pointer;
 }
 
-.flex-pie p:hover {
-    border-bottom: 1px solid black;
-    padding: 1.2rem 4rem;
-}
-
 /* Ofertas */
 .oferta {
     padding: 40px 30px;
