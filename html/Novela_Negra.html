@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/Novela_Negra.css">
 </head>
-
 <body>
     <header>
         <a href="index.html"><img src="../imagenes/logo.png" alt="Logo Entre Libros"></a>
@@ -39,75 +37,88 @@
         <h2>Novela Negra</h2>
         <div class="libros-grid">
             <div class="libro">
-                <img src="../imagenes/asistenta.jpg" alt="La asistenta">
+                <img src="../imagenes/asistenta.jpg" alt="La asistenta" />
                 <p class="titulo">La asistenta</p>
                 <p>Freida McFadden</p>
                 <p class="precio">8.99€</p>
+                <button onclick="agregarACesta('La asistenta', 8.99, '../imagenes/asistenta.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
-                <img src="../imagenes/grieta_silencio.jpg" alt="La grieta del silencio">
+                <img src="../imagenes/grieta_silencio.jpg" alt="La grieta del silencio" />
                 <p class="titulo">La grieta del silencio</p>
                 <p>Javier Castillo</p>
                 <p class="precio">11.50€</p>
+                <button onclick="agregarACesta('La grieta del silencio', 11.50, '../imagenes/grieta_silencio.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
-                <img src="../imagenes/culpas_compartidas.jpg" alt="Culpas compartidas">
+                <img src="../imagenes/culpas_compartidas.jpg" alt="Culpas compartidas" />
                 <p class="titulo">Culpas compartidas</p>
                 <p>Hjorth & Rosenfeldt</p>
                 <p class="precio">13.80€</p>
+                <button onclick="agregarACesta('Culpas compartidas', 13.80, '../imagenes/culpas_compartidas.jpg')">Añadir a la cesta</button>
             </div>
-
             <div class="libro">
-                <img src="../imagenes/la_cadena.jpg" alt="La cadena">
+                <img src="../imagenes/la_cadena.jpg" alt="La cadena" />
                 <p class="titulo">La cadena</p>
                 <p>Adrian McKinty</p>
                 <p class="precio">10.20€</p>
+                <button onclick="agregarACesta('La cadena', 10.20, '../imagenes/la_cadena.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
-                <img src="../imagenes/mala_hija.jpg" alt="La mala hija">
-                <p><strong>La mala hija</strong></p>
+                <img src="../imagenes/mala_hija.jpg" alt="La mala hija" />
+                <p class="titulo">La mala hija</p>
                 <p>Pedro Martí</p>
                 <p class="precio">19.80€</p>
+                <button onclick="agregarACesta('La mala hija', 19.80, '../imagenes/mala_hija.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
-                <img src="../imagenes/paciente.jpg" alt="El paciente">
-                <p><strong>El paciente</strong></p>
+                <img src="../imagenes/paciente.jpg" alt="El paciente" />
+                <p class="titulo">El paciente</p>
                 <p>Juan Gómez-Jurado</p>
                 <p class="precio">15.60€</p>
+                <button onclick="agregarACesta('El paciente', 15.60, '../imagenes/paciente.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
-                <img src="../imagenes/suenhos_bronce.jpg" alt="Sueños de bronce">
-                <p><strong>Sueños de bronce</strong></p>
+                <img src="../imagenes/suenhos_bronce.jpg" alt="Sueños de bronce" />
+                <p class="titulo">Sueños de bronce</p>
                 <p>Camilla Läckberg</p>
                 <p class="precio">19.30€</p>
+                <button onclick="agregarACesta('Sueños de bronce', 19.30, '../imagenes/suenhos_bronce.jpg')">Añadir a la cesta</button>
             </div>
-
             <div class="libro">
-                <img src="../imagenes/chica_tren.jpg" alt="La chica del tren">
+                <img src="../imagenes/chica_tren.jpg" alt="La chica del tren" />
                 <p class="titulo">La chica del tren</p>
                 <p>Paula Hawkings</p>
                 <p class="precio">10.50€</p>
+                <button onclick="agregarACesta('La chica del tren', 10.50, '../imagenes/chica_tren.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
-                <img src="../imagenes/silencio_ciudad_blanca.jpg" alt="El silencio de la ciudad blanca">
+                <img src="../imagenes/silencio_ciudad_blanca.jpg" alt="El silencio de la ciudad blanca" />
                 <p class="titulo">El silencio de la ciudad blanca</p>
                 <p>Eva García Sáenz de Urturi</p>
                 <p class="precio">15.99€</p>
+                <button onclick="agregarACesta('El silencio de la ciudad blanca', 15.99, '../imagenes/silencio_ciudad_blanca.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/ladron_rostros.jpg" alt="El ladrón de rostros">
+            <div class="libro">
+                <img src="../imagenes/ladron_rostros.jpg" alt="El ladrón de rostros" />
                 <p class="titulo">El ladrón de rostros</p>
                 <p>Ibon Martín</p>
                 <p class="precio">13.70€</p>
+                <button onclick="agregarACesta('El ladrón de rostros', 13.70, '../imagenes/ladron_rostros.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/angeles_demonios.jpg" alt="Ángeles y demonios">
+            <div class="libro">
+                <img src="../imagenes/angeles_demonios.jpg" alt="Ángeles y demonios" />
                 <p class="titulo">Ángeles y demonios</p>
                 <p>Dan Brown</p>
                 <p class="precio">15.20€</p>
+                <button onclick="agregarACesta('Ángeles y demonios', 15.20, '../imagenes/angeles_demonios.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/hijo_olvidado.jpg" alt="El hijo olvidado">
+            <div class="libro">
+                <img src="../imagenes/hijo_olvidado.jpg" alt="El hijo olvidado" />
                 <p class="titulo">El hijo olvidado</p>
                 <p>Mikel Santiago</p>
                 <p class="precio">20.99€</p>
+                <button onclick="agregarACesta('El hijo olvidado', 20.99, '../imagenes/hijo_olvidado.jpg')">Añadir a la cesta</button>
             </div>
         </div>
     </main>
@@ -123,6 +134,20 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
-</body>
 
+    <script>
+        function agregarACesta(titulo, precio, imagen) {
+            const cesta = JSON.parse(localStorage.getItem('cesta')) || [];
+
+            if (cesta.find(libro => libro.titulo === titulo)) {
+                alert('Este libro ya está en la cesta');
+                return;
+            }
+
+            cesta.push({ titulo, precio, imagen });
+            localStorage.setItem('cesta', JSON.stringify(cesta));
+            alert(`Añadido "${titulo}" a la cesta.`);
+        }
+    </script>
+</body>
 </html>

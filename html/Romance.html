@@ -43,66 +43,84 @@
                 <p><strong>Romper el hielo</strong></p>
                 <p>Hannah Grace</p>
                 <p class="precio">11.99€</p>
+                <button onclick="agregarACesta('Romper el hielo', 11.99, '../imagenes/romper_el_hielo.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/novia.jpg" alt="Novia">
                 <p><strong>Novia</strong></p>
                 <p>Ali Hazelwood</p>
                 <p class="precio">10.80€</p>
+                <button onclick="agregarACesta('Novia', 10.80, '../imagenes/novia.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/falso_amor.jpg" alt="Falso amor">
                 <p><strong>Falso amor</strong></p>
                 <p>Stephanie Archer</p>
                 <p class="precio">9.99€</p>
+                <button onclick="agregarACesta('Falso amor', 9.99, '../imagenes/falso_amor.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/un_cuento_imperfecto.jpg" alt="Un cuento imperfecto">
                 <p><strong>Un cuento imperfecto</strong></p>
                 <p>Elísabet Benavent</p>
                 <p class="precio">12.30€</p>
+                <button onclick="agregarACesta('Un cuento imperfecto', 12.30, '../imagenes/un_cuento_imperfecto.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/estrellas_contar.jpg" alt="Cuando no queden más estrellas que contar">
                 <p class="titulo">Cuando no queden más estrellas que contar</p>
                 <p>María Martínez</p>
                 <p class="precio">18.50€</p>
+                <button onclick="agregarACesta('Cuando no queden más estrellas que contar', 18.50, '../imagenes/estrellas_contar.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/arte_ser_nosotros.jpg" alt="El arte de ser nosotros">
                 <p class="titulo">El arte de ser nosotros</p>
                 <p>Inma Rubiales</p>
                 <p class="precio">15.99€</p>
+                <button onclick="agregarACesta('El arte de ser nosotros', 15.99, '../imagenes/arte_ser_nosotros.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/mapa_anhelos.jpg" alt="El mapa de los anhelos">
+            <div class="libro">
+                <img src="../imagenes/mapa_anhelos.jpg" alt="El mapa de los anhelos">
                 <p class="titulo">El mapa de los anhelos</p>
                 <p>Alice Kellen</p>
                 <p class="precio">14€</p>
+                <button onclick="agregarACesta('El mapa de los anhelos', 14, '../imagenes/mapa_anhelos.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/cruzando_linea.jpg" alt="Cruzando la línea">
+            <div class="libro">
+                <img src="../imagenes/cruzando_linea.jpg" alt="Cruzando la línea">
                 <p class="titulo">Cruzando la línea</p>
                 <p>Simone Soltani</p>
                 <p class="precio">20.50€</p>
+                <button onclick="agregarACesta('Cruzando la línea', 20.50, '../imagenes/cruzando_linea.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/amor_animal.jpg" alt="Amor animal">
+            <div class="libro">
+                <img src="../imagenes/amor_animal.jpg" alt="Amor animal">
                 <p class="titulo">Amor animal</p>
                 <p>Lana Ferguson</p>
                 <p class="precio">13.70€</p>
+                <button onclick="agregarACesta('Amor animal', 13.70, '../imagenes/amor_animal.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/oscuro_romeo.jpg" alt="Mi oscuro Romeo">
+            <div class="libro">
+                <img src="../imagenes/oscuro_romeo.jpg" alt="Mi oscuro Romeo">
                 <p class="titulo">Mi oscuro Romeo</p>
                 <p>Parker S. Huntington y L. J. Shen</p>
                 <p class="precio">19.20€</p>
+                <button onclick="agregarACesta('Mi oscuro Romeo', 19.20, '../imagenes/oscuro_romeo.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/collide.jpg" alt="Collide">
+            <div class="libro">
+                <img src="../imagenes/collide.jpg" alt="Collide">
                 <p class="titulo">Collide</p>
                 <p>Bal Khabra</p>
                 <p class="precio">10.50€</p>
+                <button onclick="agregarACesta('Collide', 10.50, '../imagenes/collide.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/corazon_roto.jpg" alt="Corazón roto">
+            <div class="libro">
+                <img src="../imagenes/corazon_roto.jpg" alt="Corazón roto">
                 <p class="titulo">Corazón roto</p>
                 <p>Colleen Hoover</p>
                 <p class="precio">16.95€</p>
+                <button onclick="agregarACesta('Corazón roto', 16.95, '../imagenes/corazon_roto.jpg')">Añadir a la cesta</button>
             </div>
         </div>
     </main>
@@ -118,6 +136,19 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
-</body>
+    <script>
+        function agregarACesta(titulo, precio, imagen) {
+            const cesta = JSON.parse(localStorage.getItem('cesta')) || [];
 
+            if (cesta.find(libro => libro.titulo === titulo)) {
+                alert('Este libro ya está en la cesta');
+                return;
+            }
+
+            cesta.push({ titulo, precio, imagen });
+            localStorage.setItem('cesta', JSON.stringify(cesta));
+            alert(`Añadido "${titulo}" a la cesta.`);
+        }
+    </script>
+</body>
 </html>

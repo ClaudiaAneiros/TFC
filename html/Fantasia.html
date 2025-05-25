@@ -43,64 +43,84 @@
                 <p class="titulo">Belladona</p>
                 <p>Adalyn Grace</p>
                 <p class="precio">14€</p>
+                <button onclick="agregarACesta('Belladona', 14.00, '../imagenes/belladona.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/educacion_mortal.jpg" alt="Una educación mortal">
                 <p class="titulo">Una educación mortal</p>
                 <p>Naomi Novik</p>
                 <p class="precio">12.50€</p>
+                <button onclick="agregarACesta('Una educación mortal', 12.50, '../imagenes/educacion_mortal.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/bruma_roja.jpg" alt="Bruma roja">
                 <p class="titulo">Bruma roja</p>
                 <p>Lucía G. Sobrado</p>
                 <p class="precio">13.20€</p>
+                <button onclick="agregarACesta('Bruma roja', 13.20, '../imagenes/bruma_roja.jpg')">Añadir a la cesta</button>
             </div>
             <div class="libro">
                 <img src="../imagenes/trono_cristal.jpg" alt="Trono de cristal">
                 <p class="titulo">Trono de cristal</p>
                 <p>Sarah J. Maas</p>
                 <p class="precio">15.99€</p>
+                <button onclick="agregarACesta('Trono de cristal', 15.99, '../imagenes/trono_cristal.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/demonios.jpg" alt="Todos los demonios del cielo">
+            <div class="libro">
+                <img src="../imagenes/demonios.jpg" alt="Todos los demonios del cielo">
                 <p class="titulo">Todos los demonios del cielo</p>
                 <p>Miriam Mosquera</p>
                 <p class="precio">12€</p>
+                <button onclick="agregarACesta('Todos los demonios del cielo', 12.00, '../imagenes/demonios.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/indomita.jpg" alt="Indómita">
+            <div class="libro">
+                <img src="../imagenes/indomita.jpg" alt="Indómita">
                 <p class="titulo">Indómita</p>
                 <p>Raisa Martin Espinosa</p>
                 <p class="precio">14.50€</p>
+                <button onclick="agregarACesta('Indómita', 14.50, '../imagenes/indomita.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/asesino.jpg" alt="Un asesino en las puertas">
+            <div class="libro">
+                <img src="../imagenes/asesino.jpg" alt="Un asesino en las puertas">
                 <p class="titulo">Un asesino en las puertas</p>
                 <p>Saba A Tahir</p>
                 <p class="precio">16.70€</p>
+                <button onclick="agregarACesta('Un asesino en las puertas', 16.70, '../imagenes/asesino.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/placeres_mortales.jpg" alt="Placeres mortales">
+            <div class="libro">
+                <img src="../imagenes/placeres_mortales.jpg" alt="Placeres mortales">
                 <p class="titulo">Placeres mortales</p>
                 <p>Belén Martínez</p>
                 <p class="precio">11.20€</p>
+                <button onclick="agregarACesta('Placeres mortales', 11.20, '../imagenes/placeres_mortales.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/imperio_vampiro.jpg" alt="El imperio del vampiro">
+            <div class="libro">
+                <img src="../imagenes/imperio_vampiro.jpg" alt="El imperio del vampiro">
                 <p class="titulo">El imperio del vampiro</p>
                 <p>Jay Kristoff</p>
                 <p class="precio">13.50€</p>
+                <button onclick="agregarACesta('El imperio del vampiro', 13.50, '../imagenes/imperio_vampiro.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/novena_casa.jpg" alt="La novena casa">
+            <div class="libro">
+                <img src="../imagenes/novena_casa.jpg" alt="La novena casa">
                 <p class="titulo">La novena casa</p>
                 <p>Leigh Bardugo</p>
                 <p class="precio">16.95€</p>
+                <button onclick="agregarACesta('La novena casa', 16.95, '../imagenes/novena_casa.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/maldicion_sangre.jpg" alt="La maldición de la sangre">
+            <div class="libro">
+                <img src="../imagenes/maldicion_sangre.jpg" alt="La maldición de la sangre">
                 <p class="titulo">La maldición de la sangre</p>
                 <p>M. L. Wang</p>
                 <p class="precio">17€</p>
+                <button onclick="agregarACesta('La maldición de la sangre', 17.00, '../imagenes/maldicion_sangre.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/amanecer_onyx.jpg" alt="Amanecer de onyx">
+            <div class="libro">
+                <img src="../imagenes/amanecer_onyx.jpg" alt="Amanecer de onyx">
                 <p class="titulo">Amanecer de onyx</p>
                 <p>Kate Golden</p>
                 <p class="precio">19.99€</p>
+                <button onclick="agregarACesta('Amanecer de onyx', 19.99, '../imagenes/amanecer_onyx.jpg')">Añadir a la cesta</button>
             </div>
         </div>
     </main>
@@ -116,6 +136,20 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
-</body>
 
+    <script>
+        function agregarACesta(titulo, precio, imagen) {
+            const cesta = JSON.parse(localStorage.getItem('cesta')) || [];
+
+            if (cesta.find(libro => libro.titulo === titulo)) {
+                alert('Este libro ya está en la cesta');
+                return;
+            }
+
+            cesta.push({ titulo, precio, imagen });
+            localStorage.setItem('cesta', JSON.stringify(cesta));
+            alert(`Añadido "${titulo}" a la cesta.`);
+        }
+    </script>
+</body>
 </html>
