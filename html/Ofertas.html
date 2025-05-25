@@ -36,53 +36,89 @@
     <main class="oferta">
         <h2>Libros de oferta</h2>
         <div class="libros-grid">
-            <div class="libro"><img src="../imagenes/zorro.jpg" alt="El Zorro">
+            <div class="libro">
+                <img src="../imagenes/zorro.jpg" alt="El Zorro">
                 <p class="titulo">El zorro</p>
                 <p>Frederick Forsyth</p>
+                <p class="precio">10.00€</p>
+                <button onclick="agregarACesta('El zorro', '10.00€', '../imagenes/zorro.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/olimpia.jpg" alt="Olimpia">
+            <div class="libro">
+                <img src="../imagenes/olimpia.jpg" alt="Olimpia">
                 <p class="titulo">Olimpia</p>
                 <p>Laura Mas</p>
+                <p class="precio">9.50€</p>
+                <button onclick="agregarACesta('Olimpia', '9.50€', '../imagenes/olimpia.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/nuestra_casa.jpg" alt="Nuestra casa">
+            <div class="libro">
+                <img src="../imagenes/nuestra_casa.jpg" alt="Nuestra casa">
                 <p class="titulo">Nuestra casa</p>
                 <p>Louise Candlish</p>
+                <p class="precio">11.20€</p>
+                <button onclick="agregarACesta('Nuestra casa', '11.20€', '../imagenes/nuestra_casa.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/ano100.jpg" alt="El año 1000">
+            <div class="libro">
+                <img src="../imagenes/ano100.jpg" alt="El año 1000">
                 <p class="titulo">El año 1000</p>
                 <p>Valerie Hansen</p>
+                <p class="precio">8.99€</p>
+                <button onclick="agregarACesta('El año 1000', '8.99€', '../imagenes/ano100.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/me_dejaste_entrar.jpg" alt="Me dejaste entrar">
+            <div class="libro">
+                <img src="../imagenes/me_dejaste_entrar.jpg" alt="Me dejaste entrar">
                 <p class="titulo">Me dejaste entrar</p>
                 <p>Camilla Bruce</p>
+                <p class="precio">9.90€</p>
+                <button onclick="agregarACesta('Me dejaste entrar', '9.90€', '../imagenes/me_dejaste_entrar.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/la_juglaresa.jpg" alt="La juglaresa">
+            <div class="libro">
+                <img src="../imagenes/la_juglaresa.jpg" alt="La juglaresa">
                 <p class="titulo">La juglaresa</p>
                 <p>María López Villarquide</p>
+                <p class="precio">10.30€</p>
+                <button onclick="agregarACesta('La juglaresa', '10.30€', '../imagenes/la_juglaresa.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/a_salvo.jpg" alt="A salvo">
+            <div class="libro">
+                <img src="../imagenes/a_salvo.jpg" alt="A salvo">
                 <p class="titulo">A salvo</p>
                 <p>S.K. Barnett</p>
+                <p class="precio">12.00€</p>
+                <button onclick="agregarACesta('A salvo', '12.00€', '../imagenes/a_salvo.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/los_ausentes.jpg" alt="Los ausentes">
+            <div class="libro">
+                <img src="../imagenes/los_ausentes.jpg" alt="Los ausentes">
                 <p class="titulo">Los ausentes</p>
                 <p>Juana Cortés Amunárriz</p>
+                <p class="precio">10.75€</p>
+                <button onclick="agregarACesta('Los ausentes', '10.75€', '../imagenes/los_ausentes.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/asistenta.jpg" alt="La asistenta">
+            <div class="libro">
+                <img src="../imagenes/asistenta.jpg" alt="La asistenta">
                 <p class="titulo">La asistenta</p>
                 <p>Freida McFadden</p>
+                <p class="precio">11.99€</p>
+                <button onclick="agregarACesta('La asistenta', '11.99€', '../imagenes/asistenta.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/grieta_silencio.jpg" alt="La grieta del silencio">
+            <div class="libro">
+                <img src="../imagenes/grieta_silencio.jpg" alt="La grieta del silencio">
                 <p class="titulo">La grieta del silencio</p>
                 <p>Javier Castillo</p>
+                <p class="precio">13.00€</p>
+                <button onclick="agregarACesta('La grieta del silencio', '13.00€', '../imagenes/grieta_silencio.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/culpas_compartidas.jpg" alt="Culpas compartidas">
+            <div class="libro">
+                <img src="../imagenes/culpas_compartidas.jpg" alt="Culpas compartidas">
                 <p class="titulo">Culpas compartidas</p>
                 <p>Hopkin & Rosewood</p>
+                <p class="precio">8.40€</p>
+                <button onclick="agregarACesta('Culpas compartidas', '8.40€', '../imagenes/culpas_compartidas.jpg')">Añadir a la cesta</button>
             </div>
-            <div class="libro"><img src="../imagenes/la_cadena.jpg" alt="La cadena">
+            <div class="libro">
+                <img src="../imagenes/la_cadena.jpg" alt="La cadena">
                 <p class="titulo">La cadena</p>
                 <p>Adrian McKinty</p>
+                <p class="precio">9.25€</p>
+                <button onclick="agregarACesta('La cadena', '9.25€', '../imagenes/la_cadena.jpg')">Añadir a la cesta</button>
             </div>
         </div>
     </main>
@@ -98,5 +134,20 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
+
+     <script>
+        function agregarACesta(titulo, precio, imagen) {
+            const cesta = JSON.parse(localStorage.getItem('cesta')) || [];
+
+            if (cesta.find(libro => libro.titulo === titulo)) {
+                alert('Este libro ya está en la cesta');
+                return;
+            }
+
+            cesta.push({ titulo, precio, imagen });
+            localStorage.setItem('cesta', JSON.stringify(cesta));
+            alert(`Añadido "${titulo}" a la cesta.`);
+        }
+    </script>
 </body>
 </html>
