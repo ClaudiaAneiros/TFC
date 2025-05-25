@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cesta - Entre Libros</title>
+  <link rel="stylesheet" href="../css/Cesta.css" />
+  <script src="https://kit.fontawesome.com/83e2fae601.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="../imagenes/logo.png" alt="Logo empresa Entre Libros"></a>
+    <div class="iconos-busqueda">
+      <div class="iconos">
+        <i class="fa-solid fa-heart icono"></i>
+        <i class="fa-solid fa-user icono"></i>
+        <i class="fa-solid fa-cart-shopping icono"></i>
+      </div>
+      <div class="busqueda">
+        <input type="text" name="busqueda" id="busqueda" placeholder="Busca" class="barra_busqueda">
+        <i class="fa-solid fa-magnifying-glass lupa"></i>
+      </div>
+    </div>
+  </header>
+
+  <nav class="flex-menu">
+    <ul class="horizontal">
+      <li class="flex-inicio"><a href="Inicio.html">INICIO</a></li>
+      <li class="flex-libros"><a href="Libros.html">LIBROS</a></li>
+      <li class="flex-ofertas"><a href="Ofertas.html">OFERTAS</a></li>
+      <li class="flex-nosotros"><a href="Nosotros.html">NOSOTROS</a></li>
+      <li class="flex-contacto"><a href="Contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Cesta</h2>
+    <div class="cesta" id="cesta">
+      <div class="lista-productos" id="lista-cesta">
+        <!-- Productos añadidos aparecerán aquí -->
+      </div>
+      <div class="resumen-cesta">
+        <p class="total">Total: <span id="total">0.00€</span></p> 
+        <div class="botones-cesta">
+          <button class="btn-vaciar" id="vaciar-cesta">Vaciar cesta</button>
+          <button class="btn-tramitar" id="tramitar-pedido">Tramitar pedido</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="flex-pie">
+      <a href="#" class="terms">Términos y condiciones</a>
+      <a href="#" class="politica">Política de privacidad</a>
+      <p class="derechos">© 2024 Entre Libros.</p>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const cesta = JSON.parse(localStorage.getItem('cesta')) || [];
+
+    const listaCesta = document.getElementById('lista-cesta');
+    const totalSpan = document.getElementById('total');
+    const btnVaciar = document.getElementById('vaciar-cesta');
+
+    function mostrarCesta() {
+      listaCesta.innerHTML = '';
+      let total = 0;
+
+      if (cesta.length === 0) {
+        listaCesta.innerHTML = '<p>No hay productos en la cesta.</p>';
+        totalSpan.textContent = '0.00€';
+        return;
+      }
+
+      cesta.forEach(libro => {
+        const productoDiv = document.createElement('div');
+        productoDiv.classList.add('producto');
+        productoDiv.innerHTML = `
+        <img src="${libro.imagen || 'default.jpg'}" alt="Portada de ${libro.titulo}">
+        <div class="detalle">${libro.titulo}</div>
+        <div class="precio">${libro.precio.toFixed(2)}€</div>
+        <div class="acciones-producto">
+          <button class="eliminar" data-titulo="${libro.titulo}">Eliminar</button>
+        </div>
+      `;
+        listaCesta.appendChild(productoDiv);
+        total += libro.precio;
+      });
+
+      totalSpan.textContent = total.toFixed(2) + '€';
+    }
+
+    listaCesta.addEventListener('click', e => {
+      if (e.target.classList.contains('eliminar')) {
+        const tituloEliminar = e.target.getAttribute('data-titulo');
+        const index = cesta.findIndex(libro => libro.titulo === tituloEliminar);
+        if (index !== -1) {
+          cesta.splice(index, 1);
+          localStorage.setItem('cesta', JSON.stringify(cesta));
+          mostrarCesta();
+        }
+      }
+    });
+
+    btnVaciar.addEventListener('click', () => {
+      localStorage.removeItem('cesta');
+      cesta.length = 0;
+      mostrarCesta();
+    });
+
+    mostrarCesta();
+  </script>
+</body>
+</html>
