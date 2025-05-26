@@ -34,6 +34,10 @@ img {
   cursor: pointer;
 }
 
+.iconos a{
+  color: black;
+}
+
 .icono {
   margin: 30px 10px;
   font-size: 18px;
