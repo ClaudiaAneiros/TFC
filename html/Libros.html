@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Libros - Entre Libros</title>
   <link rel="stylesheet" href="../css/Libros.css">
   <script src="https://kit.fontawesome.com/83e2fae601.js" crossorigin="anonymous"></script>
@@ -305,6 +306,7 @@
       });
     });
 
+    // CARRUSEL DE LIBROS
     document.querySelectorAll('.carrusel-container').forEach(container => {
       const carrusel = container.querySelector('.carrusel');
       const izquierda = container.querySelector('.flecha.izquierda');
@@ -326,10 +328,8 @@
         carrusel.scrollBy({ left: 300, behavior: 'smooth' });
       });
 
-      // Actualiza flechas después de desplazarse
       carrusel.addEventListener('scroll', actualizarFlechas);
 
-      // Asegúrate de que se apliquen correctamente al cargar
       window.addEventListener('load', actualizarFlechas);
     });
 
