@@ -36,8 +36,8 @@ img {
     cursor: pointer;
 }
 
-.iconos a{
-  color: black;
+.iconos a {
+    color: black;
 }
 
 .icono {
@@ -192,4 +192,69 @@ button {
 
 button:hover {
     background-color: #00796B;
+}
+
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    img {
+        margin-left: 2rem;
+        width: 150px;
+    }
+
+    .iconos,
+    .busqueda {
+        margin: 10px 20px;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .busqueda {
+        margin-top: 0;
+    }
+
+    .barra_busqueda {
+        width: 100%;
+    }
+
+    .flex-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal li {
+        margin: 0.6rem 0;
+        display: block;
+        text-align: center;
+    }
+
+    .horizontal a {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .libros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flex-pie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-pie p,
+    .flex-pie a {
+        padding: 0.5rem;
+    }
+
+    .flex-pie a:nth-of-type(1),
+    .flex-pie a:nth-of-type(2) {
+        padding: 0.7rem;
+    }
 }
