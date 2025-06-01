@@ -223,3 +223,100 @@ main {
 .btn-vaciar:hover, .btn-tramitar:hover {
     background-color: #53E7F7;
 }
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+  img {
+    margin-left: 2rem;
+    width: 150px;
+  }
+
+  .iconos,
+  .busqueda {
+    margin: 10px 20px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .busqueda {
+    margin-top: 0;
+  }
+
+  .barra_busqueda {
+    width: 100%;
+  }
+
+  .flex-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .horizontal li {
+    margin: 0.6rem 0;
+    display: block;
+    text-align: center;
+  }
+
+  .horizontal a {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .flex-menu .horizontal a:hover:not(.activo) {
+      padding: 0.2rem 0;
+      border-bottom: 1px solid black;
+  }
+
+  .resumen-cesta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .botones-cesta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-vaciar,
+  .btn-tramitar {
+    width: 100%;
+  }
+
+  .producto {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .detalle,
+  .precio,
+  .acciones-producto {
+    width: 100%;
+    text-align: left;
+  }
+
+  .flex-pie {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .flex-pie a,
+  .flex-pie p {
+    padding: 0.5rem 0;
+  }
+}
