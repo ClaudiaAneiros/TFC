@@ -212,7 +212,7 @@ p.titulo {
   color: #009688;
 }
 
-button {
+button:not(.flecha) {
     margin-top: 10px;
     padding: 8px 12px;
     background-color: #009688;
@@ -223,7 +223,7 @@ button {
     font-size: 14px;
 }
 
-button:hover {
+button:hover:not(.flecha) {
     background-color: #00796B;
 }
 
