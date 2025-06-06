@@ -42,7 +42,3 @@ Entre Libros es una aplicación web para una librería online que permite a los 
 
 <h2>Licencia</h2>
 Este proyecto tiene MIT License.
-
-
-Primark es un proyecto en el que la gente puede mirar toda la ropa y los distintos accesorios que hay para todas las edades, vendidos en las diferentes tiendas que existen de esta marca, a un precio económico.<br>
-Además, también se puede ver la disponibilidad que tienen de cada producto en cada tienda y donde están situadas, mostrándolas en un mapa con su dirección, así como se pueden realizar pedidos online y pagar en la propia página
